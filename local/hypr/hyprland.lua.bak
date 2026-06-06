@@ -1,0 +1,143 @@
+-- ============================================
+-- Spider-Man Hyprland Config — 0.55 (Lua)
+-- ============================================
+
+-- Monitor
+hl.config({
+  monitor = { { desc = "", preferred = true, position = "auto", scale = 1 } }
+})
+
+-- Exec on startup
+hl.exec_once("waybar")
+hl.exec_once("hyprpaper")
+
+-- Input
+hl.config({
+  input = {
+    kb_layout    = "tr",
+    follow_mouse = 1,
+    sensitivity  = 0,
+  }
+})
+
+-- General
+hl.config({
+  general = {
+    gaps_in           = 6,
+    gaps_out          = 12,
+    border_size       = 3,
+    active_border     = "rgba(CC0000ff) rgba(00008Bff) 45deg",
+    inactive_border   = "rgba(1a1a1aee)",
+    layout            = "dwindle",
+    resize_on_border  = true,
+  }
+})
+
+-- Decoration
+hl.config({
+  decoration = {
+    rounding = 10,
+    blur = {
+      enabled = true,
+      size    = 6,
+      passes  = 3,
+    },
+    shadow = {
+      enabled      = true,
+      range        = 20,
+      render_power = 3,
+      color        = "rgba(CC000055)",
+    },
+  }
+})
+
+-- Animations
+hl.config({
+  animations = {
+    enabled = true,
+    bezier = {
+      { name = "web",  points = { 0.05, 0.9, 0.1, 1.05 } },
+      { name = "snap", points = { 0.68, -0.55, 0.27, 1.55 } },
+    },
+    animation = {
+      { name = "windows",    duration = 6,  bezier = "web",     style = "slide" },
+      { name = "windowsOut", duration = 5,  bezier = "web",     style = "slide" },
+      { name = "border",     duration = 10, bezier = "default" },
+      { name = "fade",       duration = 7,  bezier = "default" },
+      { name = "workspaces", duration = 5,  bezier = "snap",    style = "slidevert" },
+    },
+  }
+})
+
+-- Dwindle layout
+hl.config({
+  dwindle = {
+    preserve_split = true,
+  }
+})
+
+-- Misc
+hl.config({
+  misc = {
+    force_default_wallpaper = 0,
+    disable_hyprland_logo   = true,
+  }
+})
+
+-- ============================================
+-- Window Rules
+-- ============================================
+
+hl.window_rule({ match = { class = "org.kde.dolphin" },  float = true })
+hl.window_rule({ match = { title = "Volume Control" },   float = true })
+hl.window_rule({ match = { title = "Picture-in-Picture" }, float = true })
+hl.window_rule({ match = { class = "Alacritty" }, opacity = "0.92 0.85" })
+
+-- ============================================
+-- Keybinds
+-- ============================================
+
+local mod = "SUPER"
+
+hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd("alacritty"))
+hl.bind(mod .. " + Q",      hl.dsp.window.close())
+hl.bind(mod .. " + SHIFT + M", hl.dsp.exit())
+hl.bind(mod .. " + E",     hl.dsp.exec_cmd("dolphin"))
+hl.bind(mod .. " + F",     hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind(mod .. " + P",     hl.dsp.window.pseudo({ action = "toggle" }))
+
+-- Ekran görüntüsü
+hl.bind("Print",           hl.dsp.exec_cmd('grim -g "$(slurp)" ~/Pictures/ss-$(date +%s).png'))
+hl.bind(mod .. " + Print", hl.dsp.exec_cmd('grim ~/Pictures/ss-$(date +%s).png'))
+
+-- Ses
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+
+-- Odak
+hl.bind(mod .. " + left",  hl.dsp.window.focus({ dir = "l" }))
+hl.bind(mod .. " + right", hl.dsp.window.focus({ dir = "r" }))
+hl.bind(mod .. " + up",    hl.dsp.window.focus({ dir = "u" }))
+hl.bind(mod .. " + down",  hl.dsp.window.focus({ dir = "d" }))
+hl.bind(mod .. " + H",     hl.dsp.window.focus({ dir = "l" }))
+hl.bind(mod .. " + L",     hl.dsp.window.focus({ dir = "r" }))
+hl.bind(mod .. " + K",     hl.dsp.window.focus({ dir = "u" }))
+hl.bind(mod .. " + J",     hl.dsp.window.focus({ dir = "d" }))
+
+-- Pencere taşıma
+hl.bind(mod .. " + SHIFT + left",  hl.dsp.window.move({ dir = "l" }))
+hl.bind(mod .. " + SHIFT + right", hl.dsp.window.move({ dir = "r" }))
+hl.bind(mod .. " + SHIFT + up",    hl.dsp.window.move({ dir = "u" }))
+hl.bind(mod .. " + SHIFT + down",  hl.dsp.window.move({ dir = "d" }))
+
+-- Workspace geçiş
+for i = 1, 5 do
+  hl.bind(mod .. " + " .. i, hl.dsp.workspace.goto({ id = i }))
+  hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move_to_workspace({ id = i }))
+end
+
+-- Mouse
+hl.bind(mod .. " + mouse:272", hl.dsp.window.move_with_mouse())
+hl.bind(mod .. " + mouse:273", hl.dsp.window.resize_with_mouse())

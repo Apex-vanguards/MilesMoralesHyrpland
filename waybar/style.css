@@ -1,0 +1,274 @@
+/* ============================================================
+   SPIDER-MAN CYBERPUNK WAYBAR THEME — GTK CSS CLEAN
+   Only valid GTK3 CSS properties — no cursor/transition/
+   text-shadow/box-shadow/overflow/white-space/letter-spacing
+   ============================================================ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Hack Nerd Font", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* BAR */
+window#waybar {
+    background-color: rgba(5, 0, 0, 0.90);
+    border: 1px solid #cc0000;
+    border-radius: 6px;
+    color: #e8e8e8;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 4px;
+}
+
+#custom-spider,
+#workspaces,
+#window,
+#clock,
+#mpris,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#tray,
+#custom-separator {
+    padding: 2px 6px;
+    margin: 3px 0;
+}
+
+/* SPIDER BUTTON */
+#custom-spider {
+    font-size: 20px;
+    color: #ff1010;
+    padding: 0 10px 0 8px;
+    margin: 2px 4px 2px 2px;
+    border-right: 1px solid #440000;
+}
+
+#custom-spider:hover {
+    color: #ffffff;
+    background-color: rgba(180, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+/* WORKSPACES */
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #663333;
+    font-size: 13px;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    color: #ff4444;
+    background-color: rgba(180, 0, 0, 0.12);
+    border-bottom: 2px solid #ff2020;
+}
+
+#workspaces button.active {
+    color: #ff2020;
+    border-bottom: 2px solid #ff2020;
+    background-color: rgba(180, 0, 0, 0.15);
+}
+
+#workspaces button.urgent {
+    color: #ffffff;
+    background-color: #cc0000;
+    border-radius: 3px;
+}
+
+/* WINDOW TITLE */
+#window {
+    color: #888888;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+/* CLOCK */
+#clock {
+    font-family: "Orbitron", "JetBrainsMono Nerd Font", monospace;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ff2020;
+    padding: 0 14px;
+}
+
+/* SEPARATOR */
+#custom-separator {
+    color: #440000;
+    font-size: 16px;
+    padding: 0 2px;
+    margin: 0;
+}
+
+/* MPRIS */
+#mpris {
+    color: #cc4444;
+}
+
+#mpris.playing {
+    color: #ff5555;
+}
+
+#mpris.paused {
+    color: #884444;
+}
+
+#mpris.stopped {
+    color: #442222;
+}
+
+/* VOLUME */
+#pulseaudio {
+    color: #cc4444;
+}
+
+#pulseaudio:hover {
+    color: #ff6666;
+    background-color: rgba(200, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+#pulseaudio.muted {
+    color: #553333;
+}
+
+/* NETWORK */
+#network {
+    color: #cc4444;
+}
+
+#network:hover {
+    color: #ff6666;
+    background-color: rgba(200, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+#network.disconnected {
+    color: #553333;
+}
+
+/* CPU */
+#cpu {
+    color: #cc4444;
+}
+
+#cpu.warning {
+    color: #ff8800;
+}
+
+#cpu.critical {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* MEMORY */
+#memory {
+    color: #cc4444;
+}
+
+#memory.warning {
+    color: #ff8800;
+}
+
+#memory.critical {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* TEMPERATURE */
+#temperature {
+    color: #cc4444;
+}
+
+#temperature.critical {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* BATTERY */
+#battery {
+    color: #cc4444;
+}
+
+#battery.charging {
+    color: #ff5555;
+}
+
+#battery.plugged {
+    color: #ff7777;
+}
+
+#battery.warning:not(.charging) {
+    color: #ff8800;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* TRAY */
+#tray {
+    padding: 0 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #440000;
+    border-radius: 3px;
+}
+
+/* TOOLTIP */
+tooltip {
+    background-color: rgba(8, 0, 0, 0.97);
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 4px 8px;
+}
+
+tooltip label {
+    color: #e0e0e0;
+    font-size: 12px;
+}
+
+/* CALENDAR */
+calendar {
+    background-color: rgba(8, 0, 0, 0.98);
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 8px;
+}
+
+calendar:selected {
+    background-color: #cc0000;
+    border-radius: 3px;
+}

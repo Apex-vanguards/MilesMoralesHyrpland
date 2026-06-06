@@ -1,0 +1,63 @@
+# ╔══════════════════════════════════════════╗
+# ║   MAKO — SPIDER-MAN THEME               ║
+# ╚══════════════════════════════════════════╝
+
+# Position & size
+anchor=top-right
+margin=10
+padding=12,16
+width=340
+height=120
+border-radius=6
+
+# Fonts
+font=JetBrainsMono Nerd Font 12
+
+# Colors             background  text        border
+background-color=#0a0000ee
+text-color=#e8e8e8ff
+border-color=#cc0000ff
+progress-color=over #cc000055
+
+# Border
+border-size=1
+
+# Behaviour
+default-timeout=5000
+ignore-timeout=0
+max-visible=5
+sort=-time
+
+# Icons
+icon-path=/usr/share/icons/breeze/
+max-icon-size=48
+
+# ── Urgency: low ─────────────────────────────────────────────
+[urgency=low]
+background-color=#050000dd
+text-color=#888888ff
+border-color=#440000ff
+default-timeout=3000
+
+# ── Urgency: normal ───────────────────────────────────────────
+[urgency=normal]
+background-color=#0a0000ee
+text-color=#e8e8e8ff
+border-color=#cc0000ff
+default-timeout=5000
+
+# ── Urgency: high ─────────────────────────────────────────────
+[urgency=high]
+background-color=#1a0000ff
+text-color=#ffffffff
+border-color=#ff2020ff
+default-timeout=0
+
+# ── App-specific ─────────────────────────────────────────────
+[app-name=firefox]
+border-color=#cc0000ff
+default-timeout=4000
+
+[app-name=Spotify]
+border-color=#cc0000ff
+default-timeout=3000

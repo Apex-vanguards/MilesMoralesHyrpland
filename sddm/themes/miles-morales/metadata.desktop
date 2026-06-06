@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=Miles Morales
+Description=Spider-Man: Miles Morales — sleek red/black SDDM login theme
+Author=Custom Theme
+Version=1.0
+License=MIT
+Type=sddm-theme
+QtVersion=6
+ConfigFile=theme.conf
+Screenshot=preview.png

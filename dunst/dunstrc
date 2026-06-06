@@ -1,0 +1,62 @@
+[global]
+  icon_theme = Papirus-Dark
+    transparency = 20
+    monitor = 0
+    follow = mouse
+    width = 340
+    height = (0, 300)
+    origin = top-right
+    offset = (15, 45)
+    notification_limit = 5
+    padding = 16
+    horizontal_padding = 16
+    text_icon_padding = 10
+    frame_width = 2
+    gap_size = 8
+    separator_height = 0
+    sort = yes
+    idle_threshold = 120
+    font = JetBrainsMono Nerd Font 12
+    line_height = 2
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    word_wrap = yes
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+    enable_recursive_icon_lookup = true
+    sticky_history = yes
+    history_length = 20
+    always_run_script = true
+    corner_radius = 10 
+    frame_color = "#192841"
+    background = "#050608"
+    foreground = "#d1d5db"
+[urgency_low]
+    # Hafif bildirimler: Koyu siyah/lacivert
+    background = "#050608"
+    foreground = "#888888"
+    frame_color = "#192841"
+    timeout = 3
+
+[urgency_normal]
+    # Normal bildirimler: Klasik Spidey Laciverti
+    background = "#111529"
+    foreground = "#e5e7eb"
+    frame_color = "#ef4444"
+    timeout = 6
+
+[urgency_critical]
+    # Acil bildirimler: Spider-Sense tetiklendi! (Parlak Kırmızı)
+    background = "#8B0000" 
+    foreground = "#ffffff"
+    frame_color = "#FFFFFF"
+    timeout = 0
