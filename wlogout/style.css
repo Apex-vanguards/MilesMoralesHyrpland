@@ -1,5 +1,5 @@
 /* ============================================================
-   SPIDER-MAN WLOGOUT THEME
+   DARK BLUE WLOGOUT THEME
    ============================================================ */
 
 * {
@@ -8,38 +8,38 @@
 }
 
 window {
-    background-color: rgba(5, 0, 0, 0.92);
+    background-color: rgba(0, 5, 15, 0.92);
 }
 
 /* Grid of buttons */
 button {
-    color: #cc0000;
-    background-color: rgba(10, 0, 0, 0.85);
-    border: 1px solid #440000;
+    color: #007acc;
+    background-color: rgba(0, 5, 15, 0.85);
+    border: 1px solid #002244;
     border-radius: 6px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40%;
     margin: 10px;
     transition: all 0.2s ease;
-    box-shadow: 0 0 6px rgba(180, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 100, 180, 0.3);
 }
 
 button:focus,
 button:active,
 button:hover {
-    background-color: rgba(180, 0, 0, 0.25);
-    border-color: #ff2020;
+    background-color: rgba(0, 50, 100, 0.25);
+    border-color: #20aaff;
     color: #ffffff;
     box-shadow:
-        0 0 12px rgba(255, 0, 0, 0.7),
-        inset 0 0 12px rgba(255, 0, 0, 0.05);
+        0 0 12px rgba(0, 170, 255, 0.7),
+        inset 0 0 12px rgba(0, 170, 255, 0.05);
     outline-style: none;
 }
 
-#lock     { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
-#logout   { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
-#suspend  { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#lock      { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout    { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend   { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
 #hibernate{ background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
 #shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
 #reboot   { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }

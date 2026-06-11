@@ -1,5 +1,5 @@
 [global]
-  icon_theme = Papirus-Dark
+    icon_theme = Papirus-Dark
     transparency = 20
     monitor = 0
     follow = mouse
@@ -37,26 +37,28 @@
     history_length = 20
     always_run_script = true
     corner_radius = 10 
-    frame_color = "#192841"
-    background = "#050608"
-    foreground = "#d1d5db"
+    # Global cerceve ve arxa plani tund goy etdik
+    frame_color = "#004488"
+    background = "#00050a"
+    foreground = "#d1dce8"
+
 [urgency_low]
-    # Hafif bildirimler: Koyu siyah/lacivert
-    background = "#050608"
-    foreground = "#888888"
-    frame_color = "#192841"
+    # Hafif bildirimler: Tund lacivert
+    background = "#00050a"
+    foreground = "#6688aa"
+    frame_color = "#002244"
     timeout = 3
 
 [urgency_normal]
-    # Normal bildirimler: Klasik Spidey Laciverti
-    background = "#111529"
-    foreground = "#e5e7eb"
-    frame_color = "#ef4444"
+    # Normal bildirimler: Cyberpunk Mavi
+    background = "#001122"
+    foreground = "#e0e8f0"
+    frame_color = "#007acc"
     timeout = 6
 
 [urgency_critical]
-    # Acil bildirimler: Spider-Sense tetiklendi! (Parlak Kırmızı)
-    background = "#8B0000" 
+    # Acil bildirimler: Neon Mavi (Cyberpunk Alert)
+    background = "#002244" 
     foreground = "#ffffff"
-    frame_color = "#FFFFFF"
+    frame_color = "#00ffff"
     timeout = 0

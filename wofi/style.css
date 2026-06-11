@@ -1,7 +1,7 @@
 window {
   margin: 0px;
-  border: 5px solid #660000; /* Tünd qırmızı çərçivə */
-  background-color: rgba(20, 0, 0, 0.85); /* Qan qırmızısı fon */
+  border: 5px solid #002244; /* Tünd göy çərçivə */
+  background-color: rgba(0, 5, 20, 0.85); /* Dərin tünd göy fon */
   border-radius: 15px;
 }
 
@@ -11,10 +11,10 @@ window {
   padding: 4px 10px;
   margin: 10px;
   margin-bottom: 2px;
-  border: 2px solid #ff0000; /* Parlaq qırmızı giriş sahəsi */
+  border: 2px solid #007acc; /* Parlaq neon mavi giriş sahəsi */
   color: #ffffff;
   font-weight: bold;
-  background-color: #2a0000;
+  background-color: #001122;
   outline: none;
   border-radius: 15px;
 }
@@ -31,7 +31,7 @@ window {
   padding: 3px;
   border: none;
   border-radius: 15px;
-  border: 5px solid #660000;
+  border: 5px solid #002244;
 }
 
 #scroll {
@@ -43,7 +43,7 @@ window {
 
 #text:selected {
   color: #ffffff;
-  background-color: #ff0000;
+  background-color: #007acc;
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
@@ -60,7 +60,7 @@ window {
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
-  /* Spider-Man qırmızısı gradienti */
-  background: linear-gradient(90deg, #ff0000 0%, #8b0000 100%);
+  /* Dark Blue Cyberpunk gradienti */
+  background: linear-gradient(90deg, #007acc 0%, #002244 100%);
   color: #ffffff;
 }
